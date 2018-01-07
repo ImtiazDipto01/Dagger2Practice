@@ -20,7 +20,7 @@ public class EidBonus {
         this.bonusAmount = this.bonusAmount + salaryAmount ;
     }
 
-    public void withoutBonus(){
+    public void withoutEidBonus(){
         this.bonusAmount = 0 ;
     }
 
