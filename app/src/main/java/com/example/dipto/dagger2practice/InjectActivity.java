@@ -4,6 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.dipto.dagger2practice.component.DaggerEmployeeSalaryComponent;
+import com.example.dipto.dagger2practice.component.EmployeeSalaryComponent;
+import com.example.dipto.dagger2practice.module.EmployeeSalaryModule;
+
 public class InjectActivity extends AppCompatActivity {
 
     TextView salaryWithEidBonus ;
@@ -17,5 +21,8 @@ public class InjectActivity extends AppCompatActivity {
 
         //EmployeeSalaryComponent component = EmployeeSalaryComponent
         //EmployeeSalaryComponent component = EmployeeSalaryComponent.Builder().
+
+        EmployeeSalaryComponent component = DaggerEmployeeSalaryComponent.builder().employeeSalaryModule(new EmployeeSalaryModule()).build() ;
+
     }
 }

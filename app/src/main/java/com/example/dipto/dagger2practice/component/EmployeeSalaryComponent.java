@@ -1,4 +1,7 @@
-package com.example.dipto.dagger2practice;
+package com.example.dipto.dagger2practice.component;
+
+import com.example.dipto.dagger2practice.EmployeeSalary;
+import com.example.dipto.dagger2practice.module.EmployeeSalaryModule;
 
 import javax.inject.Singleton;
 
@@ -14,9 +17,9 @@ public interface EmployeeSalaryComponent {
 
     EmployeeSalary provideEmployeeSalary() ;
 
-    @Component.Builder
+    /*@Component.Builder
     interface Builder {
         EmployeeSalaryComponent build();
         Builder appModule(EmployeeSalaryModule appModule);
-    }
+    }*/
 }

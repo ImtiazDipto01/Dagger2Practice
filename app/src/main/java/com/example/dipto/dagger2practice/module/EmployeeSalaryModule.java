@@ -1,4 +1,7 @@
-package com.example.dipto.dagger2practice;
+package com.example.dipto.dagger2practice.module;
+
+import com.example.dipto.dagger2practice.EidBonus;
+import com.example.dipto.dagger2practice.EmployeeSalary;
 
 import javax.inject.Singleton;
 
