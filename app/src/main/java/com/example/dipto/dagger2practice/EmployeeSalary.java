@@ -15,8 +15,8 @@ public class EmployeeSalary {
         this.eidBonus = eidBonus ;
     }
 
-    public void calculateSalaryWithEidBonus(int salary){
-        eidBonus.setBonusWithSalary(salary);
+    public void calculateSalaryWithEidBonus(){
+        eidBonus.setBonusWithSalary(10000);
     }
 
     public void normalBonus(){

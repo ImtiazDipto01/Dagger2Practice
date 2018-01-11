@@ -11,18 +11,19 @@ import com.example.dipto.dagger2practice.module.EmployeeSalaryModule;
 public class InjectActivity extends AppCompatActivity {
 
     TextView salaryWithEidBonus ;
+    EmployeeSalary employeeSalary ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inject);
 
-        salaryWithEidBonus = findViewById(R.id.salary_with_eid_bonus) ;
-
-        //EmployeeSalaryComponent component = EmployeeSalaryComponent
-        //EmployeeSalaryComponent component = EmployeeSalaryComponent.Builder().
+        salaryWithEidBonus = (TextView) findViewById(R.id.employee_salary) ;
 
         EmployeeSalaryComponent component = DaggerEmployeeSalaryComponent.builder().employeeSalaryModule(new EmployeeSalaryModule()).build() ;
-
+        employeeSalary.calculateSalaryWithEidBonus();
+        employeeSalary = component.provideEmployeeSalary() ;
+        String value = String.valueOf(employeeSalary.getEmployeeSalaryWithEidBonus());
+        salaryWithEidBonus.setText(value);
     }
 }
