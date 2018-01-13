@@ -23,7 +23,7 @@ public class EmployeeSalaryModule {
 
     @Provides
     @Singleton
-    EmployeeSalary provideEmployeeSalary(){
-        return new EmployeeSalary(new EidBonus());
+    EmployeeSalary provideEmployeeSalary(EidBonus eidBonus){
+        return new EmployeeSalary(eidBonus);
     }
 }

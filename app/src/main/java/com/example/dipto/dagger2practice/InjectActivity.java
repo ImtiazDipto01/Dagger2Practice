@@ -21,8 +21,8 @@ public class InjectActivity extends AppCompatActivity {
         salaryWithEidBonus = (TextView) findViewById(R.id.employee_salary) ;
 
         EmployeeSalaryComponent component = DaggerEmployeeSalaryComponent.builder().employeeSalaryModule(new EmployeeSalaryModule()).build() ;
-        employeeSalary.calculateSalaryWithEidBonus();
         employeeSalary = component.provideEmployeeSalary() ;
+        employeeSalary.calculateSalaryWithEidBonus(15000);
         String value = String.valueOf(employeeSalary.getEmployeeSalaryWithEidBonus());
         salaryWithEidBonus.setText(value);
     }
